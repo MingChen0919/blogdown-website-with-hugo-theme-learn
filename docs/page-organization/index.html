@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
 
-    <title>Host site on GitHub :: My New Hugo Site</title>
+    <title>Page organization :: My New Hugo Site</title>
     
     
     <link href="../css/nucleus.css?1512793487" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/host-site-on-github/">
+  <body class="" data-url="/page-organization/">
     <nav id="sidebar" class="">
 
 
@@ -98,8 +98,8 @@
   
     
     <li data-nav-id="/host-site-on-github/" title="Host site on GitHub" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="../host-site-on-github/">
@@ -164,8 +164,8 @@
   
     
     <li data-nav-id="/page-organization/" title="Page organization" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="../page-organization/">
@@ -436,7 +436,7 @@
             
           
           
-            <a href='../'>Blogdown Website with Hugo-Theme-Learn</a> > Host site on GitHub
+            <a href='../'>Blogdown Website with Hugo-Theme-Learn</a> > Page organization
           
          
           
@@ -458,43 +458,106 @@
         
         <div id="body-inner">
           
-            <h1>Host site on GitHub</h1>
+            <h1>Page organization</h1>
           
 
         
 
 
-<style>
-pre code, pre, code {
-  white-space: pre !important;
-  overflow-x: scroll !important;
-  word-break: keep-all !important;
-  word-wrap: initial !important;
-}
-</style>
-<div id="git-repository" class="section level4">
-<h4>Git repository</h4>
-<p>Go into the project directory and run the command to make the project directory as a git repository.</p>
-<pre class="r"><code>git init .
-git add . 
-git commit &#39;init project&#39;</code></pre>
-</div>
-<div id="associate-git-repository-with-github-remote-repository" class="section level4">
-<h4>Associate git repository with github remote repository</h4>
-<pre class="r"><code>git remote add origin https://github.com/MingChen0919/blogdown-website-with-hugo-theme-learn.git</code></pre>
-</div>
-<div id="the-content-and-.rmd-files" class="section level4">
-<h4>The <strong>content/</strong> and <code>.Rmd</code> files</h4>
-<p>All <code>.Rmd</code> files should go to the <strong>content/</strong> directory. When running the <code>blogdown::server_site()</code> function, the <code>.Rmd</code> files within <strong>content/</strong> directory will get rendered and HTML files will be generated and copied to the <strong>publish directory</strong>.</p>
-<div class="notices note" ><p>By default, the <strong>publish directory</strong> is the <strong>public/</strong> directory. However, when hosting a website on GitHub, GitHub can only recognize website files within the <strong>docs/</strong> folder. We need to change the default <strong>publish directory</strong> from <strong>public/</strong> to <strong>docs/</strong>.</p>
-</div>
+<div id="page-order" class="section level4">
+<h4>Page order</h4>
+<p>Use <code>weight</code> within <code>.Rmd</code> file to order pages. See the example:</p>
+<ul>
+<li><code>_index.Rmd</code> for <strong>Blogdwon a site</strong> page</li>
+</ul>
+<pre class="r"><code>---
+weight: 1
+title: &quot;Blogdown a site&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---</code></pre>
+<ul>
+<li><code>_index.Rmd</code> for <strong>Host site on GitHub</strong> page</li>
+</ul>
+<pre class="r"><code>---
+weight: 2
+title: &quot;Host site on GitHub&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---</code></pre>
+<ul>
+<li><code>_index.Rmd</code> for <strong>Edit config.toml</strong> page</li>
+</ul>
+<pre class="r"><code>---
+weight: 3
+title: &quot;Edit config.toml&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---</code></pre>
+<ul>
+<li>Use <strong>Level 1 Menu 1</strong> and <strong>Level 1 Menu 2</strong> as a page organization template.</li>
+</ul>
+<p><img src="../page-organization/images/level-1-menu-1.png" width="200px" /></p>
+<pre class="r"><code>├── _index.Rmd
+├── _index.html
+├── level-2-menu-1
+│   ├── _index.Rmd
+│   ├── _index.html
+│   ├── page-1.Rmd
+│   ├── page-1.html
+│   ├── page-2.Rmd
+│   └── page-2.html
+├── page-1.Rmd
+├── page-1.html
+├── page-2.Rmd
+└── page-2.html</code></pre>
+<pre class="r"><code>==&gt; level-1-menu-1/_index.Rmd &lt;==
+---
+weight: 6
+title: &quot;Level 1 Menu 1&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---
 
-<p>Add the following line to the <strong>config.toml</strong> file to change the default publish directory.</p>
-<pre class="r"><code>publishDir = &quot;docs&quot;</code></pre>
-</div>
-<div id="publish-site-on-github" class="section level4">
-<h4>Publish site on GitHub</h4>
-<p>After run the <code>blogdown::server_site()</code> function and push all commits to GitHub, go to the github repository, click <strong>settings</strong>, find the <strong>GitHub Pages</strong> section, and then select <strong>master branch /docs folder</strong> and save.</p>
+==&gt; level-1-menu-1/page-1.Rmd &lt;==
+---
+weight: 1
+title: &quot;Page 1&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---
+
+==&gt; level-1-menu-1/page-2.Rmd &lt;==
+---
+weight: 2
+title: &quot;Page 2&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---
+  
+==&gt; level-1-menu-1/level-2-menu-1/_index.Rmd &lt;==
+---
+title: &quot;Level 2 Menu 1&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---
+
+
+==&gt; level-1-menu-1/level-2-menu-1/page-1.Rmd &lt;==
+---
+weight: 1
+title: &quot;Page 1&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---
+
+==&gt; level-1-menu-1/level-2-menu-1/page-2.Rmd &lt;==
+---
+weight: 2
+title: &quot;Page 2&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---  </code></pre>
 </div>
 
 
@@ -552,26 +615,6 @@ git commit &#39;init project&#39;</code></pre>
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -620,6 +663,26 @@ git commit &#39;init project&#39;</code></pre>
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -658,57 +721,6 @@ git commit &#39;init project&#39;</code></pre>
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
                     
             
         
@@ -763,15 +775,66 @@ git commit &#39;init project&#39;</code></pre>
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
         
         
 
 
         
-            <a class="nav nav-prev" href="../blogdown-a-site/" title="Blogdown a site"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="../customize-logo/" title="Customoze logo"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="../edit-config-toml/" title="Edit config.toml" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="../level-1-menu-1/" title="Level 1 Menu 1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

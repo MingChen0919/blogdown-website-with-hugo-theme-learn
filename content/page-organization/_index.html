@@ -1,0 +1,104 @@
+---
+weight: 5
+title: "Page organization"
+author: "Ming Chen"
+output: html_document
+---
+
+
+
+<div id="page-order" class="section level4">
+<h4>Page order</h4>
+<p>Use <code>weight</code> within <code>.Rmd</code> file to order pages. See the example:</p>
+<ul>
+<li><code>_index.Rmd</code> for <strong>Blogdwon a site</strong> page</li>
+</ul>
+<pre class="r"><code>---
+weight: 1
+title: &quot;Blogdown a site&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---</code></pre>
+<ul>
+<li><code>_index.Rmd</code> for <strong>Host site on GitHub</strong> page</li>
+</ul>
+<pre class="r"><code>---
+weight: 2
+title: &quot;Host site on GitHub&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---</code></pre>
+<ul>
+<li><code>_index.Rmd</code> for <strong>Edit config.toml</strong> page</li>
+</ul>
+<pre class="r"><code>---
+weight: 3
+title: &quot;Edit config.toml&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---</code></pre>
+<ul>
+<li>Use <strong>Level 1 Menu 1</strong> and <strong>Level 1 Menu 2</strong> as a page organization template.</li>
+</ul>
+<p><img src="/page-organization/images/level-1-menu-1.png" width="200px" /></p>
+<pre class="r"><code>├── _index.Rmd
+├── _index.html
+├── level-2-menu-1
+│   ├── _index.Rmd
+│   ├── _index.html
+│   ├── page-1.Rmd
+│   ├── page-1.html
+│   ├── page-2.Rmd
+│   └── page-2.html
+├── page-1.Rmd
+├── page-1.html
+├── page-2.Rmd
+└── page-2.html</code></pre>
+<pre class="r"><code>==&gt; level-1-menu-1/_index.Rmd &lt;==
+---
+weight: 6
+title: &quot;Level 1 Menu 1&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---
+
+==&gt; level-1-menu-1/page-1.Rmd &lt;==
+---
+weight: 1
+title: &quot;Page 1&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---
+
+==&gt; level-1-menu-1/page-2.Rmd &lt;==
+---
+weight: 2
+title: &quot;Page 2&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---
+  
+==&gt; level-1-menu-1/level-2-menu-1/_index.Rmd &lt;==
+---
+title: &quot;Level 2 Menu 1&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---
+
+
+==&gt; level-1-menu-1/level-2-menu-1/page-1.Rmd &lt;==
+---
+weight: 1
+title: &quot;Page 1&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---
+
+==&gt; level-1-menu-1/level-2-menu-1/page-2.Rmd &lt;==
+---
+weight: 2
+title: &quot;Page 2&quot;
+author: &quot;Ming Chen&quot;
+output: html_document
+---  </code></pre>
+</div>

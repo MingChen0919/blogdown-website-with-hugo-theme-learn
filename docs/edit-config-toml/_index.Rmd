@@ -10,7 +10,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+{{% notice note %}}
 Add the line `relativeurls = true` to the `config.toml` file. This is required. Otherwise, the links to css files will be broken when the site is hosted on github.
+{{% /notice %}}
 
 ```{r eval=FALSE}
 theme = "hugo-theme-learn"
@@ -18,5 +20,20 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 relativeurls = true
+```
+
+Adding the following lines to the `config.toml` file will make the site searchable.
+
+```{r eval=FALSE}
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+```
+
+Change site colors
+
+```{r eval=FALSE}
+[params]
+  # Change default color scheme with a variant one. Can be "red", "blue", "green".
+  themeVariant = "blue"
 ```
 

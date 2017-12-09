@@ -1,0 +1,120 @@
+[
+{
+	"uri": "/blogdown-a-site/",
+	"title": "Blogdown a site",
+	"tags": [],
+	"description": "",
+	"content": "Hugo-theme-learn is a very good theme for building documentation sites. The R blogdown package makes it very easy to create blogs and websites with R Markdown language. This site is to show how to use blogdown with the hugo-theme-learn theme to quickly build a documentation site.\nOpen RStudio, click File-\u0026gt;New Project-\u0026gt; New Directory -\u0026gt; Website using blogdown.\nUncheck the option Add sample blog posts and Add the example site of the theme so that we can start with a very basic website.\nInstead of using the official matcornic/hugo-theme-learn theme, we are going to use a fork of that theme: MingChen0919/hugo-theme-learn. The original theme displays all R Markdown content at very low opacity, which makes it almost unreadable. This issue has been fixed in the forked theme.\n"
+},
+{
+	"uri": "/level-1-menu-1/level-2-menu-1/page-1/",
+	"title": "Page 1",
+	"tags": [],
+	"description": "",
+	"content": "Page 1 under level 2 menu 1.\n"
+},
+{
+	"uri": "/level-1-menu-1/page-1/",
+	"title": "Page 1",
+	"tags": [],
+	"description": "",
+	"content": "Page 1 under level 1 menu 1.\n"
+},
+{
+	"uri": "/level-1-menu-2/page-1/",
+	"title": "Page 1",
+	"tags": [],
+	"description": "",
+	"content": "Page 1 under level 1 menu 2.\n"
+},
+{
+	"uri": "/host-site-on-github/",
+	"title": "Host site on GitHub",
+	"tags": [],
+	"description": "",
+	"content": " pre code, pre, code { white-space: pre !important; overflow-x: scroll !important; word-break: keep-all !important; word-wrap: initial !important; }  Git repository Go into the project directory and run the command to make the project directory as a git repository.\ngit init . git add . git commit \u0026#39;init project\u0026#39;  Associate git repository with github remote repository git remote add origin https://github.com/MingChen0919/blogdown-website-with-hugo-theme-learn.git  The content/ and .Rmd files All .Rmd files should go to the content/ directory. When running the blogdown::server_site() function, the .Rmd files within content/ directory will get rendered and HTML files will be generated and copied to the publish directory.\nBy default, the publish directory is the public/ directory. However, when hosting a website on GitHub, GitHub can only recognize website files within the docs/ folder. We need to change the default publish directory from public/ to docs/.\n Add the following line to the config.toml file to change the default publish directory.\npublishDir = \u0026quot;docs\u0026quot;  Publish site on GitHub After run the blogdown::server_site() function and push all commits to GitHub, go to the github repository, click settings, find the GitHub Pages section, and then select master branch /docs folder and save.\n "
+},
+{
+	"uri": "/level-1-menu-1/level-2-menu-1/page-2/",
+	"title": "Page 2",
+	"tags": [],
+	"description": "",
+	"content": "Page 2 under level 2 menu 1.\n"
+},
+{
+	"uri": "/level-1-menu-1/page-2/",
+	"title": "Page 2",
+	"tags": [],
+	"description": "",
+	"content": "Page 2 under level 1 menu 1.\n"
+},
+{
+	"uri": "/level-1-menu-2/page-2/",
+	"title": "Page 2",
+	"tags": [],
+	"description": "",
+	"content": "Page 2 under level 1 menu 2.\n"
+},
+{
+	"uri": "/edit-config-toml/",
+	"title": "Edit config.toml",
+	"tags": [],
+	"description": "",
+	"content": "Add the line relativeurls = true to the config.toml file. This is required. Otherwise, the links to css files will be broken when the site is hosted on github.\n theme = \u0026quot;hugo-theme-learn\u0026quot; baseURL = \u0026quot;http://example.org/\u0026quot; languageCode = \u0026quot;en-us\u0026quot; title = \u0026quot;My New Hugo Site\u0026quot; relativeurls = true Adding the following lines to the config.toml file will make the site searchable.\n[outputs] home = [ \u0026quot;HTML\u0026quot;, \u0026quot;RSS\u0026quot;, \u0026quot;JSON\u0026quot;] Change site colors\n[params] # Change default color scheme with a variant one. Can be \u0026quot;red\u0026quot;, \u0026quot;blue\u0026quot;, \u0026quot;green\u0026quot;. themeVariant = \u0026quot;blue\u0026quot; "
+},
+{
+	"uri": "/customize-logo/",
+	"title": "Customoze logo",
+	"tags": [],
+	"description": "",
+	"content": " pre code, pre, code { white-space: pre !important; overflow-x: scroll !important; word-break: keep-all !important; word-wrap: initial !important; }  Put your logo image into directory content/images. Then replace the content of themes/hugo-theme-learn/layouts/partials/logo.html with the content below:\n\u0026lt;a id=\u0026quot;logo\u0026quot; href=\u0026quot;https://mingchen0919.github.io/blogdown-website-with-hugo-theme-learn/\u0026quot;\u0026gt; \u0026lt;img src=\u0026quot;/images/mingchen-github-logo.png\u0026quot;\u0026gt; \u0026lt;/a\u0026gt; "
+},
+{
+	"uri": "/page-organization/",
+	"title": "Page organization",
+	"tags": [],
+	"description": "",
+	"content": "Page order Use weight within .Rmd file to order pages. See the example:\n _index.Rmd for Blogdwon a site page  --- weight: 1 title: \u0026quot;Blogdown a site\u0026quot; author: \u0026quot;Ming Chen\u0026quot; output: html_document ---  _index.Rmd for Host site on GitHub page  --- weight: 2 title: \u0026quot;Host site on GitHub\u0026quot; author: \u0026quot;Ming Chen\u0026quot; output: html_document ---  _index.Rmd for Edit config.toml page  --- weight: 3 title: \u0026quot;Edit config.toml\u0026quot; author: \u0026quot;Ming Chen\u0026quot; output: html_document ---  Use Level 1 Menu 1 and Level 1 Menu 2 as a page organization template.  ├── _index.Rmd ├── _index.html ├── level-2-menu-1 │ ├── _index.Rmd │ ├── _index.html │ ├── page-1.Rmd │ ├── page-1.html │ ├── page-2.Rmd │ └── page-2.html ├── page-1.Rmd ├── page-1.html ├── page-2.Rmd └── page-2.html ==\u0026gt; level-1-menu-1/_index.Rmd \u0026lt;== --- weight: 6 title: \u0026quot;Level 1 Menu 1\u0026quot; author: \u0026quot;Ming Chen\u0026quot; output: html_document --- ==\u0026gt; level-1-menu-1/page-1.Rmd \u0026lt;== --- weight: 1 title: \u0026quot;Page 1\u0026quot; author: \u0026quot;Ming Chen\u0026quot; output: html_document --- ==\u0026gt; level-1-menu-1/page-2.Rmd \u0026lt;== --- weight: 2 title: \u0026quot;Page 2\u0026quot; author: \u0026quot;Ming Chen\u0026quot; output: html_document --- ==\u0026gt; level-1-menu-1/level-2-menu-1/_index.Rmd \u0026lt;== --- title: \u0026quot;Level 2 Menu 1\u0026quot; author: \u0026quot;Ming Chen\u0026quot; output: html_document --- ==\u0026gt; level-1-menu-1/level-2-menu-1/page-1.Rmd \u0026lt;== --- weight: 1 title: \u0026quot;Page 1\u0026quot; author: \u0026quot;Ming Chen\u0026quot; output: html_document --- ==\u0026gt; level-1-menu-1/level-2-menu-1/page-2.Rmd \u0026lt;== --- weight: 2 title: \u0026quot;Page 2\u0026quot; author: \u0026quot;Ming Chen\u0026quot; output: html_document ---   "
+},
+{
+	"uri": "/level-1-menu-1/",
+	"title": "Level 1 Menu 1",
+	"tags": [],
+	"description": "",
+	"content": "This is the level 1 menu 1 front page.\n"
+},
+{
+	"uri": "/level-1-menu-2/",
+	"title": "Level 1 Menu 2",
+	"tags": [],
+	"description": "",
+	"content": "This is the level 1 menu 2 front page.\n"
+},
+{
+	"uri": "/",
+	"title": "Blogdown Website with Hugo-Theme-Learn",
+	"tags": [],
+	"description": "",
+	"content": "Home page  "
+},
+{
+	"uri": "/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/level-1-menu-1/level-2-menu-1/",
+	"title": "Level 2 Menu 1",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

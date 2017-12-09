@@ -1,5 +1,5 @@
 ---
-weight: 5
+weight: 2
 title: "Host site on GitHub"
 author: "Ming Chen"
 output: html_document
@@ -15,26 +15,25 @@ pre code, pre, code {
   word-wrap: initial !important;
 }
 </style>
-<div id="initialize-the-project-as-a-github-repository" class="section level4">
-<h4>Initialize the project as a github repository</h4>
-<p><code>cd</code> to the project directory and run the command</p>
+<div id="git-repository" class="section level4">
+<h4>Git repository</h4>
+<p>Go into the project directory and run the command to make the project directory as a git repository.</p>
 <pre class="r"><code>git init .
 git add . 
 git commit &#39;init project&#39;</code></pre>
 </div>
-<div id="link-local-repository-to-an-empty-remote-github-repository" class="section level4">
-<h4>Link local repository to an empty remote github repository</h4>
+<div id="associate-git-repository-with-github-remote-repository" class="section level4">
+<h4>Associate git repository with github remote repository</h4>
 <pre class="r"><code>git remote add origin https://github.com/MingChen0919/blogdown-website-with-hugo-theme-learn.git</code></pre>
 </div>
-<div id="host-site-on-github" class="section level4">
-<h4>Host site on github</h4>
-<ul>
-<li>render the site with <code>blogdown::serve_site()</code></li>
-<li>copy <strong>public/</strong> to <strong>docs/</strong>: <code>cp -r public/ docs/</code></li>
-<li>push updates to github: <code>git add . &amp;&amp; git commit -m 'updates' &amp;&amp; git push</code></li>
-<li>change GitHub pages source to <strong>master branch /docs folder</strong>
-<ul>
-<li>this can be done by go to the github repository, click <strong>settings</strong>, find the <strong>GitHub Pages</strong> section, and then select <strong>master branch /docs folder</strong>.</li>
-</ul></li>
-</ul>
+<div id="the-content-and-.rmd-files" class="section level4">
+<h4>The <strong>content/</strong> and <code>.Rmd</code> files</h4>
+<p>All <code>.Rmd</code> files should go to the <strong>content/</strong> directory. When running the <code>blogdown::server_site()</code> function, the <code>.Rmd</code> files within <strong>content/</strong> directory will get rendered and HTML files will be generated and copied to the <strong>publish directory</strong>.</p>
+<p>{{% notice note %}} By default, the <strong>publish directory</strong> is the <strong>public/</strong> directory. However, when hosting a website on GitHub, GitHub can only recognize website files within the <strong>docs/</strong> folder. We need to change the default <strong>publish directory</strong> from <strong>public/</strong> to <strong>docs/</strong>. {{% /notice %}}</p>
+<p>Add the following line to the <strong>config.toml</strong> file to change the default publish directory.</p>
+<pre class="r"><code>publishDir = &quot;docs&quot;</code></pre>
+</div>
+<div id="publish-site-on-github" class="section level4">
+<h4>Publish site on GitHub</h4>
+<p>After run the <code>blogdown::server_site()</code> function and push all commits to GitHub, go to the github repository, click <strong>settings</strong>, find the <strong>GitHub Pages</strong> section, and then select <strong>master branch /docs folder</strong> and save.</p>
 </div>

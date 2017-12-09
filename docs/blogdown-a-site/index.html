@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
 
-    <title>Host site on GitHub :: My New Hugo Site</title>
+    <title>Blogdown a site :: My New Hugo Site</title>
     
     
     <link href="../css/nucleus.css?1512793487" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/host-site-on-github/">
+  <body class="" data-url="/blogdown-a-site/">
     <nav id="sidebar" class="">
 
 
@@ -76,8 +76,8 @@
   
     
     <li data-nav-id="/blogdown-a-site/" title="Blogdown a site" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="../blogdown-a-site/">
@@ -98,8 +98,8 @@
   
     
     <li data-nav-id="/host-site-on-github/" title="Host site on GitHub" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="../host-site-on-github/">
@@ -436,7 +436,7 @@
             
           
           
-            <a href='../'>Blogdown Website with Hugo-Theme-Learn</a> > Host site on GitHub
+            <a href='../'>Blogdown Website with Hugo-Theme-Learn</a> > Blogdown a site
           
          
           
@@ -458,44 +458,17 @@
         
         <div id="body-inner">
           
-            <h1>Host site on GitHub</h1>
+            <h1>Blogdown a site</h1>
           
 
         
 
 
-<style>
-pre code, pre, code {
-  white-space: pre !important;
-  overflow-x: scroll !important;
-  word-break: keep-all !important;
-  word-wrap: initial !important;
-}
-</style>
-<div id="git-repository" class="section level4">
-<h4>Git repository</h4>
-<p>Go into the project directory and run the command to make the project directory as a git repository.</p>
-<pre class="r"><code>git init .
-git add . 
-git commit &#39;init project&#39;</code></pre>
-</div>
-<div id="associate-git-repository-with-github-remote-repository" class="section level4">
-<h4>Associate git repository with github remote repository</h4>
-<pre class="r"><code>git remote add origin https://github.com/MingChen0919/blogdown-website-with-hugo-theme-learn.git</code></pre>
-</div>
-<div id="the-content-and-.rmd-files" class="section level4">
-<h4>The <strong>content/</strong> and <code>.Rmd</code> files</h4>
-<p>All <code>.Rmd</code> files should go to the <strong>content/</strong> directory. When running the <code>blogdown::server_site()</code> function, the <code>.Rmd</code> files within <strong>content/</strong> directory will get rendered and HTML files will be generated and copied to the <strong>publish directory</strong>.</p>
-<div class="notices note" ><p>By default, the <strong>publish directory</strong> is the <strong>public/</strong> directory. However, when hosting a website on GitHub, GitHub can only recognize website files within the <strong>docs/</strong> folder. We need to change the default <strong>publish directory</strong> from <strong>public/</strong> to <strong>docs/</strong>.</p>
-</div>
-
-<p>Add the following line to the <strong>config.toml</strong> file to change the default publish directory.</p>
-<pre class="r"><code>publishDir = &quot;docs&quot;</code></pre>
-</div>
-<div id="publish-site-on-github" class="section level4">
-<h4>Publish site on GitHub</h4>
-<p>After run the <code>blogdown::server_site()</code> function and push all commits to GitHub, go to the github repository, click <strong>settings</strong>, find the <strong>GitHub Pages</strong> section, and then select <strong>master branch /docs folder</strong> and save.</p>
-</div>
+<p><a href="https://github.com/matcornic/hugo-theme-learn">Hugo-theme-learn</a> is a very good theme for building documentation sites. The R <a href="https://github.com/rstudio/blogdown">blogdown</a> package makes it very easy to create blogs and websites with R Markdown language. This site is to show how to use <strong>blogdown</strong> with the <strong>hugo-theme-learn</strong> theme to quickly build a documentation site.</p>
+<p>Open RStudio, click <strong>File-&gt;New Project-&gt; New Directory -&gt; Website using blogdown</strong>.</p>
+<p>Uncheck the option <strong>Add sample blog posts</strong> and <strong>Add the example site of the theme</strong> so that we can start with a very basic website.</p>
+<p>Instead of using the official <strong>matcornic/hugo-theme-learn</strong> theme, we are going to use a fork of that theme: <strong>MingChen0919/hugo-theme-learn</strong>. The original theme displays all R Markdown content at very low opacity, which makes it almost unreadable. This issue has been fixed in the forked theme.</p>
+<p><img src="../blogdown-a-site/images/blogdown-a-site-rstudio.png" /><!-- --></p>
 
 
 <footer class=" footline" >
@@ -533,25 +506,6 @@ git commit &#39;init project&#39;</code></pre>
             
                 
                     
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -571,6 +525,22 @@ git commit &#39;init project&#39;</code></pre>
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -768,10 +738,10 @@ git commit &#39;init project&#39;</code></pre>
 
 
         
-            <a class="nav nav-prev" href="../blogdown-a-site/" title="Blogdown a site"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="../" title="Blogdown Website with Hugo-Theme-Learn"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="../edit-config-toml/" title="Edit config.toml" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="../host-site-on-github/" title="Host site on GitHub" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

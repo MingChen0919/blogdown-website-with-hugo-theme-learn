@@ -1,5 +1,5 @@
 ---
-weight: 5
+weight: 2
 title: "Host site on GitHub"
 author: "Ming Chen"
 output: html_document
@@ -18,9 +18,9 @@ pre code, pre, code {
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-#### Initialize the project as a github repository
+#### Git repository
 
-`cd` to the project directory and run the command
+Go into the project directory and run the command to make the project directory as a git repository.
 
 ```{r eval=FALSE}
 git init .
@@ -28,19 +28,30 @@ git add .
 git commit 'init project'
 ```
 
-#### Link local repository to an empty remote github repository
+#### Associate git repository with github remote repository
 
 ```{r eval=FALSE}
 git remote add origin https://github.com/MingChen0919/blogdown-website-with-hugo-theme-learn.git
 ```
 
-#### Host site on github
+#### The **content/** and `.Rmd` files
 
-* render the site with `blogdown::serve_site()`
-* copy **public/** to **docs/**: `cp -r public/ docs/`
-* push updates to github: `git add . && git commit -m 'updates' && git push`
-* change GitHub pages source to **master branch /docs folder**
-    + this can be done by go to the github repository, click **settings**, find the **GitHub Pages** section, and then select **master branch /docs folder**.
+All `.Rmd` files should go to the **content/** directory. When running the `blogdown::server_site()` function, the `.Rmd` files within **content/** directory will get rendered and HTML files will be generated and copied to the **publish directory**.
+
+{{% notice note %}}
+By default, the **publish directory** is the **public/** directory. However, when hosting a website on GitHub, GitHub can only recognize website files within the **docs/** folder. We need to change the default **publish directory** from **public/** to **docs/**.
+{{% /notice %}}
+
+Add the following line to the **config.toml** file to change the default publish directory.
+
+```{r eval=FALSE}
+publishDir = "docs"
+```
+
+
+#### Publish site on GitHub
+
+After run the `blogdown::server_site()` function and push all commits to GitHub, go to the github repository, click **settings**, find the **GitHub Pages** section, and then select **master branch /docs folder** and save.
 
 
 

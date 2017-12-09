@@ -1,12 +1,11 @@
 ---
-weight: 6
-title: "Level 1 Menu 1"
+weight: 1
+title: "Blogdown site with hugo theme learn"
 author: "Ming Chen"
 output: html_document
 ---
 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-This is the level 1 menu 1 front page.

@@ -1,0 +1,24 @@
+---
+weight: 1
+title: "Blogdown a site"
+author: "Ming Chen"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+[Hugo-theme-learn](https://github.com/matcornic/hugo-theme-learn) is a very good theme for building documentation sites. The R [blogdown](https://github.com/rstudio/blogdown) package makes it very easy to create blogs and websites with R Markdown language. This site is to show how to use **blogdown** with the **hugo-theme-learn** theme to quickly build a documentation site.
+
+Open RStudio, click **File->New Project-> New Directory -> Website using blogdown**.
+
+Uncheck the option **Add sample blog posts** and **Add the example site of the theme** so that we can start with a very basic website.
+
+Instead of using the official **matcornic/hugo-theme-learn** theme, we are going to use a fork of that theme: **MingChen0919/hugo-theme-learn**. The original theme displays all R Markdown content at very low opacity, which makes it almost unreadable. This issue has been fixed in the forked theme.
+
+```{r}
+knitr::include_graphics('/blogdown-a-site/images/blogdown-a-site-rstudio.png')
+```
+

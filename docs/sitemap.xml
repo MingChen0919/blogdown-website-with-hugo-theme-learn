@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/level-1-menu-1/</loc>
+    <loc>/blogdown-a-site/</loc>
   </url>
   
   <url>
@@ -19,7 +19,7 @@
   </url>
   
   <url>
-    <loc>/level-1-menu-2/</loc>
+    <loc>/host-site-on-github/</loc>
   </url>
   
   <url>
@@ -43,7 +43,15 @@
   </url>
   
   <url>
-    <loc>/host-site-on-github/</loc>
+    <loc>/page-organization/</loc>
+  </url>
+  
+  <url>
+    <loc>/level-1-menu-1/</loc>
+  </url>
+  
+  <url>
+    <loc>/level-1-menu-2/</loc>
   </url>
   
   <url>
