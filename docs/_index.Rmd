@@ -11,4 +11,4 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Blogdown website with Hugo-theme-learn
 
-This is a tutorial website for demonstrating how to use R [blogdown](https://github.com/rstudio/blogdown) with [hugo-learn-theme](https://github.com/matcornic/hugo-theme-learn) to painlessly create nice documentation sites.
+This is a tutorial website for demonstrating how to use R [blogdown](https://github.com/rstudio/blogdown) with [hugo-learn-theme](https://github.com/matcornic/hugo-theme-learn) to painlessly create pretty documentation sites.
