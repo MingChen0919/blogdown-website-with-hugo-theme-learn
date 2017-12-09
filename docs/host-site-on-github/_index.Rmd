@@ -1,0 +1,46 @@
+---
+weight: 3
+title: "Host site on GitHub"
+author: "Ming Chen"
+output: html_document
+---
+
+<style>
+pre code, pre, code {
+  white-space: pre !important;
+  overflow-x: scroll !important;
+  word-break: keep-all !important;
+  word-wrap: initial !important;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Initialize the project as a github repository
+
+`cd` to the project directory and run the command
+
+```{r eval=FALSE}
+git init .
+git add . 
+git commit 'init project'
+```
+
+#### Link local repository to an empty remote github repository
+
+```{r eval=FALSE}
+git remote add origin https://github.com/MingChen0919/blogdown-website-with-hugo-theme-learn.git
+```
+
+#### Host site on github
+
+* render the site with `blogdown::serve_site()`
+* copy **public/** to **docs/**: `cp -r public/ docs/`
+* push updates to github: `git add . && git commit -m 'updates' && git push`
+* change GitHub pages source to **master branch /docs folder**
+    + this can be done by go to the github repository, click **settings**, find the **GitHub Pages** section, and then select **master branch /docs folder**.
+
+
+
