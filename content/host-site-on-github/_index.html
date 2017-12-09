@@ -1,0 +1,40 @@
+---
+weight: 3
+title: "Host site on GitHub"
+author: "Ming Chen"
+output: html_document
+---
+
+
+
+<style>
+pre code, pre, code {
+  white-space: pre !important;
+  overflow-x: scroll !important;
+  word-break: keep-all !important;
+  word-wrap: initial !important;
+}
+</style>
+<div id="initialize-the-project-as-a-github-repository" class="section level4">
+<h4>Initialize the project as a github repository</h4>
+<p><code>cd</code> to the project directory and run the command</p>
+<pre class="r"><code>git init .
+git add . 
+git commit &#39;init project&#39;</code></pre>
+</div>
+<div id="link-local-repository-to-an-empty-remote-github-repository" class="section level4">
+<h4>Link local repository to an empty remote github repository</h4>
+<pre class="r"><code>git remote add origin https://github.com/MingChen0919/blogdown-website-with-hugo-theme-learn.git</code></pre>
+</div>
+<div id="host-site-on-github" class="section level4">
+<h4>Host site on github</h4>
+<ul>
+<li>render the site with <code>blogdown::serve_site()</code></li>
+<li>copy <strong>public/</strong> to <strong>docs/</strong>: <code>cp -r public/ docs/</code></li>
+<li>push updates to github: <code>git add . &amp;&amp; git commit -m 'updates' &amp;&amp; git push</code></li>
+<li>change GitHub pages source to <strong>master branch /docs folder</strong>
+<ul>
+<li>this can be done by go to the github repository, click <strong>settings</strong>, find the <strong>GitHub Pages</strong> section, and then select <strong>master branch /docs folder</strong>.</li>
+</ul></li>
+</ul>
+</div>

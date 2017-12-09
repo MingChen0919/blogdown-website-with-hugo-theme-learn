@@ -1,0 +1,12 @@
+---
+weight: 1
+title: "Page 1"
+author: "Ming Chen"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Page 1 under level 2 menu 1.
