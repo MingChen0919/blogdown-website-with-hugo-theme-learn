@@ -2,10 +2,13 @@
 title: "Blogdown Website with Hugo-Theme-Learn"
 author: "Ming Chen"
 output: html_document
+chapter: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Home page
+# Blogdown website with Hugo-theme-learn
+
+This is a tutorial website for demonstrating how to use R [blogdown](https://github.com/rstudio/blogdown) with [hugo-learn-theme](https://github.com/matcornic/hugo-theme-learn) to painlessly create nice documentation sites.
