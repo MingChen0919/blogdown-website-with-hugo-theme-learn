@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Host site on GitHub on My New Hugo Site</title>
+    <title>Edit config.toml on My New Hugo Site</title>
     <link>/edit-config-toml/</link>
-    <description>Recent content in Host site on GitHub on My New Hugo Site</description>
+    <description>Recent content in Edit config.toml on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     

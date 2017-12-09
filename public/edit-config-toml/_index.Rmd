@@ -1,6 +1,6 @@
 ---
 weight: 3
-title: "Host site on GitHub"
+title: "Edit config.toml"
 author: "Ming Chen"
 output: html_document
 ---
