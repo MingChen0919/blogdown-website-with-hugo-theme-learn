@@ -64,7 +64,7 @@
 },
 {
 	"uri": "/customize-logo/",
-	"title": "Customoze logo",
+	"title": "Customize logo",
 	"tags": [],
 	"description": "",
 	"content": " pre code, pre, code { white-space: pre !important; overflow-x: scroll !important; word-break: keep-all !important; word-wrap: initial !important; }  Put your logo image into directory content/images. Then replace the content of themes/hugo-theme-learn/layouts/partials/logo.html with the content below:\n\u0026lt;a id=\u0026quot;logo\u0026quot; href=\u0026quot;https://mingchen0919.github.io/blogdown-website-with-hugo-theme-learn/\u0026quot;\u0026gt; \u0026lt;img src=\u0026quot;/images/mingchen-github-logo.png\u0026quot;\u0026gt; \u0026lt;/a\u0026gt; "

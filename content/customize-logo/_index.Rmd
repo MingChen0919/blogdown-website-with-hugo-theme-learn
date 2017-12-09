@@ -1,6 +1,6 @@
 ---
 weight: 4
-title: "Customoze logo"
+title: "Customize logo"
 author: "Ming Chen"
 output: html_document
 ---
