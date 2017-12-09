@@ -35,11 +35,15 @@
   </url>
   
   <url>
-    <loc>/host-site-on-github/</loc>
+    <loc>/edit-config-toml/</loc>
   </url>
   
   <url>
     <loc>/customize-logo/</loc>
+  </url>
+  
+  <url>
+    <loc>/host-site-on-github/</loc>
   </url>
   
   <url>

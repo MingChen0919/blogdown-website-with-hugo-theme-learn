@@ -1,0 +1,15 @@
+---
+weight: 3
+title: "Host site on GitHub"
+author: "Ming Chen"
+output: html_document
+---
+
+
+
+<p>Add the line <code>relativeurls = true</code> to the <code>config.toml</code> file. This is required. Otherwise, the links to css files will be broken when the site is hosted on github.</p>
+<pre class="r"><code>theme = &quot;hugo-theme-learn&quot;
+baseURL = &quot;http://example.org/&quot;
+languageCode = &quot;en-us&quot;
+title = &quot;My New Hugo Site&quot;
+relativeurls = true</code></pre>
